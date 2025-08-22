@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alumno · {{APELLIDO}}, {{NOMBRE}}</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+<header class="container">
+  <a class="back" href="../index.html">← Volver al índice</a>
+  <h1>{{APELLIDO}}, {{NOMBRE}}</h1>
+  <p class="muted">Usuario GitHub: <code>{{GITHUB_USER}}</code></p>
+</header>
+
+<main class="container narrow">
+  <section>
+    <h2>Presentación</h2>
+    <p>Mucho gusto, mi nombre es Vanessa Guerra, me gusta el dibujo, la ciberseguridad y el desarrollo backend.</p>
+  </section>
+
+  <section>
+    <h2>Enlaces</h2>
+    <ul>
+      <li>GitHub: <a href="https://github.com/vanessa055" target="_blank" rel="noopener">github.com/{{GITHUB_USER}}</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Mini-desafío</h2>
+    <p>Agrega un snippet de código que imprima tu nombre y un mensaje en el lenguaje que prefieras.</p>
+    <pre><code>// Ejemplo en JavaScript
+console.log("Hola, soy Vanessa guerra");</code></pre>
+  </section>
+</main>
+
+<footer class="container">
+  <p class="muted">Si puedes soñarlo, puedes programarlo</p>
+</footer>
+</body>
+</html>
