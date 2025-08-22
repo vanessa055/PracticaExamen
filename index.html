@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Universidad Rafael Landívar · Técnico en Sistemas · Actividad de Pull Requests</title>
+  <meta name="description" content="Actividad colaborativa de Git y Pull Requests para 10 alumnos del Técnico en Sistemas (URL)."/>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <link rel="icon" href="./assets/url-tec-sistemas.svg">
+</head>
+<body>
+<header class="hero">
+  <div class="hero__bg"></div>
+  <div class="container hero__content">
+    <img src="./assets/url-tec-sistemas.svg" alt="Logo URL Técnico en Sistemas" class="hero__logo" />
+    <div>
+      <p class="kicker">Universidad Rafael Landívar</p>
+      <h1 class="title">Técnico en Sistemas</h1>
+      <p class="subtitle">Actividad de Integración: <strong>Git & Pull Requests</strong></p>
+      <div class="badges">
+        <span class="badge">HTML</span>
+        <span class="badge">Git</span>
+        <span class="badge">GitHub</span>
+        <span class="badge">Colaboración</span>
+      </div>
+    </div>
+  </div>
+  <div class="wave" aria-hidden="true"></div>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2>Objetivo</h2>
+    <p>Cada estudiante crea su página personal y añade su <em>tarjeta</em> al índice mediante un <strong>Pull Request</strong>. Al final, este sitio mostrará 10 tarjetas con enlaces a las páginas individuales.</p>
+    <details class="hint">
+      <summary>Instrucciones rápidas</summary>
+      <ol>
+        <li>Haz <strong>fork</strong> del repositorio y crea una rama: <code>feature/apellido-nombre</code>.</li>
+        <li>Copia <code>alumnos/_TEMPLATE.html</code> a <code>alumnos/&lt;tu-usuario-github&gt;.html</code> y edita tu información.</li>
+        <li>En este <code>index.html</code>, reemplaza un <strong>Slot libre</strong> por tu tarjeta (sigue el comentario guía).</li>
+        <li>Mantén el <strong>orden alfabético por APELLIDO</strong>.</li>
+        <li>Commit, push y abre tu Pull Request usando la plantilla incluida.</li>
+      </ol>
+    </details>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Índice de alumnos</h2>
+      <span class="counter" id="counter">0 / 10</span>
+    </div>
+    <div class="grid" id="cards">
+      <!--
+        📌 Guía para añadir tu tarjeta:
+        1) Duplica un bloque <article class="card libre">, quita la clase "libre".
+        2) Cambia el <h3> por "Apellido, Nombre".
+        3) Cambia el enlace para que apunte a tu página en /alumnos/usuario.html.
+        4) Mantén el orden alfabético por APELLIDO.
+        5) Borra este comentario en tu bloque final.
+      -->
+      <article class="card libre"><h3>Slot 1 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 2 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 3 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 4 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 5 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 6 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 7 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 8 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 9 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+      <article class="card libre"><h3>Slot 10 — Libre</h3><p>Agrega aquí tu tarjeta.</p><a href="./alumnos/_TEMPLATE.html">Ver plantilla</a></article>
+    </div>
+  </section>
+
+  <section class="panel alt">
+    <h2>Recomendaciones</h2>
+    <ul class="checks">
+      <li>Usa mensajes de commit claros (Convencional Commits recomendado).</li>
+      <li>Pasa el validador HTML de <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C</a>.</li>
+      <li>Si hay conflictos, resuélvelos manteniendo el orden alfabético.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container foot__content">
+    <small>© Universidad Rafael Landívar — Técnico en Sistemas · Práctica de Git & PRs</small>
+    <nav class="foot__links">
+      <a href="./README.md">README</a>
+      <a href="./alumnos/_TEMPLATE.html">Plantilla</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Contador simple de tarjetas ocupadas
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const filled = cards.filter(c => !c.classList.contains('libre')).length;
+  const counter = document.getElementById('counter');
+  if (counter) counter.textContent = `${filled} / 10`;
+</script>
+</body>
+</html>

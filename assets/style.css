@@ -1,0 +1,106 @@
+/* Estilo modernizado con enfoque académico (URL – Técnico en Sistemas) */
+:root{
+  --bg1:#0b1020;
+  --bg2:#0a0f1a;
+  --bg3:#0c1225;
+  --card:#0f172a;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --ring:#1e293b;
+  --accent:#0ea5e9;
+  --accent2:#22d3ee;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+  color:var(--text);
+  background: radial-gradient(1000px 600px at 20% -10%, rgba(14,165,233,.12), transparent 60%),
+              radial-gradient(800px 500px at 120% 10%, rgba(34,211,238,.12), transparent 60%),
+              linear-gradient(120deg, var(--bg1), var(--bg2) 30%, var(--bg3) 100%);
+}
+.container{width:min(1120px,92vw);margin:0 auto;padding:24px 0}
+.narrow{width:min(800px,92vw)}
+
+.hero{
+  position:relative;
+  padding:0 0 24px;
+  overflow:hidden;
+}
+.hero__bg{
+  position:absolute; inset:0;
+  background: conic-gradient(from 200deg at 10% -10%, rgba(14,165,233,.35), transparent 30%),
+              conic-gradient(from 120deg at 110% -20%, rgba(34,211,238,.35), transparent 30%);
+  filter: blur(60px);
+  opacity:.6;
+}
+.hero__content{
+  display:flex; align-items:center; gap:24px; padding:56px 0 24px;
+}
+.hero__logo{width:84px; height:84px; flex:0 0 auto; filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));}
+.kicker{letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; font-weight:600}
+.title{font-size:clamp(28px,4vw,42px); margin:0 0 4px}
+.subtitle{margin:0 0 10px; color:var(--text)}
+.badges{display:flex; gap:8px; flex-wrap:wrap}
+.badge{border:1px solid var(--ring); padding:6px 10px; border-radius:999px; font-size:.9rem; background:rgba(15,23,42,.6)}
+
+.wave{
+  width:100%; height:60px; margin-top:8px;
+  background: linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,0));
+  border-top-left-radius:40px; border-top-right-radius:40px;
+}
+
+.section-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+.counter{background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#00131a; padding:4px 10px; border-radius:999px; font-weight:700}
+
+.panel{
+  border:1px solid var(--ring);
+  border-radius:16px;
+  background:linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.6));
+  padding:16px 18px; margin:20px 0 28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.panel.alt{background:linear-gradient(180deg, rgba(10,18,34,.9), rgba(12,20,40,.6))}
+
+.hint{
+  border:1px dashed #334155;
+  border-radius:12px; padding:12px 16px; background:rgba(15,23,42,.6); margin-top:10px;
+}
+
+.grid{
+  display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap:16px; margin:16px 0 48px;
+}
+.card{
+  border:1px solid var(--ring);
+  background:linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.6));
+  border-radius:16px; padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.card:hover{ transform:translateY(-2px); border-color:var(--accent); box-shadow:0 14px 34px rgba(0,0,0,.35) }
+.card h3{margin:0 0 8px}
+.card a{
+  display:inline-block; margin-top:8px; text-decoration:none; color:white;
+  background:linear-gradient(90deg, var(--accent), var(--accent2));
+  padding:8px 12px; border-radius:10px;
+}
+.card.libre{ outline:2px dashed #334155; outline-offset:-6px; opacity:.9 }
+
+.checks{padding-left:18px}
+.checks li{margin:6px 0}
+
+.foot{
+  border-top:1px solid var(--ring); margin-top:20px;
+  background:rgba(15,23,42,.5);
+}
+.foot__content{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 0}
+.foot__links a{color:var(--text); opacity:.9; text-decoration:none; margin-left:10px}
+.foot__links a:hover{opacity:1; text-decoration:underline}
+
+a{color:var(--accent)}
+a:hover{text-decoration:underline}
+code{background:#0b1220; padding:2px 6px; border-radius:6px}
+pre{background:#0b1220; border:1px solid #111827; padding:12px; border-radius:12px; overflow-x:auto}
